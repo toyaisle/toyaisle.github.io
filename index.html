@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Aisle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="images/ta_logo.svg" class="logo"></a>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="burger" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#" class="active">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+        </div>
+    </div>
+    <!-- Hero Banner -->
+    <header>
+        <div class="hero">
+            <div class="herotext">
+                <h1>HI THERE!</h1>
+                <p>Take a stroll down The Toy Aisle, and I'll guarantee you won't regret it!</p>
+                <a href="#" class="herobutton">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <main>
+        <section class="content">
+        </section>
+
+        <!-- Collection Title -->
+        <section class="collection-title">
+            <h1>Our Collection</h1>
+        </section>
+
+        <!-- Card Section -->
+        <section class="cards">
+            <div class="card-wrapper swiper">
+                <div class="swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="images/toy1.jpg" alt="Toy 1">
+                        <h3>Toy 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy2.jpg" alt="Toy 2">
+                        <h3>Toy 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy3.jpg" alt="Toy 3">
+                        <h3>Toy 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy4.jpg" alt="Toy 4">
+                        <h3>Toy 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy5.jpg" alt="Toy 5">
+                        <h3>Toy 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Embedded Video -->
+        <section class="video">
+            <div class="video-container">
+                <div class="video-description">
+                    <h2>Video Title</h2>
+                    <p>This is a short description of the video.</p>
+                </div>
+                <div class="video-frame">
+                    <video id="videoPlayer" class="responsive-video" controls>
+                        <source src="videos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion Section -->
+        <section class="accordion">
+            <div class="accordion-container">
+                <div class="faq-container">
+                    <div class="faq-info">
+                        <h1> Frequently Ask Questions</h1>
+                        <div class="faq-items">
+                            <div class="faq-item">
+                                <div class="faq-item-header">
+                                    <h3>
+                                        Product return policy
+                                    </h3>
+                                    <button class="faq-toggler">+</button>
+                                </div>
+                                <div class="faq-item-body">
+                                    30 day return policy
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-item-header">
+                                    <h3>
+                                        Shipping & Delivery
+                                    </h3>
+                                    <button class="faq-toggler">+</button>
+                                </div>
+                                <div class="faq-item-body">
+                                    1-3 days to deliver the toys
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-item-header">
+                                    <h3>
+                                        Payment Options
+                                    </h3>
+                                    <button class="faq-toggler">+</button>
+                                </div>
+                                <div class="faq-item-body">
+                                    Cash, Credit Card and Debit card
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero necessitatibus assumenda officiis
+                    ducimus itaque culpa odit natus modi, repudiandae nam cupiditate dolor! Iure rerum est quasi odit
+                    distinctio saepe.</p>
+            </div>
+            <div class="quick-links-contact">
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h2>Contact Us</h2>
+                    <p>hello@toyaisle.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Toy Aisle</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/swiper.js"></script>
+</body>
+
+</html>
