@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Toy Aisle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/ta_logo.svg" class="logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="burger" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <div id="map"></div>
+            <div class="contact-info">
+                <h2>Our Store</h2>
+                <p>1320 16 Ave SW, Calgary, AB</p>
+                <p>Email: hello@toyaisle.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero necessitatibus assumenda officiis
+                    ducimus itaque culpa odit natus modi, repudiandae nam cupiditate dolor! Iure rerum est quasi odit
+                    distinctio saepe.</p>
+            </div>
+            <div class="quick-links-contact">
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h2>Contact Us</h2>
+                    <p>hello@toyaisle.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Toy Aisle</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

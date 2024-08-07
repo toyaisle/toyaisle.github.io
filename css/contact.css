@@ -1,0 +1,24 @@
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Toy Aisle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel = "stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/ta_logo.svg" class="logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="burger" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="shop">
+            <h1>Shop</h1>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero necessitatibus assumenda officiis
+                    ducimus itaque culpa odit natus modi, repudiandae nam cupiditate dolor! Iure rerum est quasi odit
+                    distinctio saepe.</p>
+            </div>
+            <div class="quick-links-contact">
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h2>Contact Us</h2>
+                    <p>hello@toyaisle.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Toy Aisle</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
