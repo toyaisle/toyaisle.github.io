@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_URL = 'https://fakestoreapi.com/products';
+    const apiLink = 'https://fakestoreapi.com/products';
 
-    fetch(API_URL)
+    fetch(apiLink)
         .then(response => response.json())
         .then(products => {
             const productGrid = document.getElementById('product-grid');
