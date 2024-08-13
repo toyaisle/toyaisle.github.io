@@ -399,7 +399,7 @@ footer {
 
 .footer-content {
     background-color: #14223E;
-    padding: 20px;
+    padding: 40px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -409,7 +409,7 @@ footer {
 .footer-bottom {
     background-color: #EF3B3B;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0px;
 }
 
 .about-us {

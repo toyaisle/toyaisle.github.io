@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzwD2J3kG-4f0BGDrQFCSo1qFCMxd0UTA&loading=async&callback=initMap"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap"></script>
+
 </head>
 <body>
     <!-- NavBar -->
@@ -47,16 +48,43 @@
 
     <main>
         <section class="contact">
-            <h1>Contact Us</h1>
-            <div id="map"></div>
-            <div class="contact-info">
-                <h2>Our Store</h2>
-                <p>1320 16 Ave SW, Calgary, AB</p>
-                <p>Email: hello@toyaisle.com</p>
-                <p>Phone: (123) 456-7890</p>
+            <div class="contact-container">
+                <div class="left-side">
+                    <div id="map"></div>
+                    <div class="contact-info">
+                        <h2>Our Store</h2>
+                        <p>1320 16 Ave SW, Calgary, AB</p>
+                        <p>Email: hello@toyaisle.com</p>
+                        <p>Phone: (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="right-side">
+                    <h2>Contact Us</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes/Concern</label>
+                            <textarea id="notes" name="notes" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+    
 
     <footer>
         <div class="footer-content">
