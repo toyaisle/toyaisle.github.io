@@ -107,27 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(error => console.error('Error fetching product data:', error));
-
-    // Search and Filter Functionality (if applicable)
-    if (shopWrapper.classList.contains('shop-wrapper')) {
-        window.searchProducts = function () {
-            const query = document.getElementById('search-bar').value.toLowerCase();
-            const filter = document.getElementById('filter-options').value;
-            const productCards = document.querySelectorAll('.product-card');
-
-            productCards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const category = card.dataset.category;
-
-                const matchesSearch = title.includes(query);
-                const matchesFilter = !filter || category === filter;
-
-                if (matchesSearch && matchesFilter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        };
-    }
 });
