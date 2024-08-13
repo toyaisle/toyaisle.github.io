@@ -1,13 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const shopWrapper = document.querySelector('.shop-wrapper') || document.querySelector('.card-wrapper');
-
     if (!shopWrapper) return;
-
-    // Fetch products from API
     fetch('https://dummyjson.com/products?limit=20')
         .then(response => response.json())
         .then(data => {
-            // Custom titles array
             const customTitles = [
                 'Creepy the Monkey',
                 'Cube of Rubik',
@@ -30,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Nintendo Switch',
                 'Yellow Helicopter'
             ];
-
-            // Custom descriptions array
             const customDescriptions = [
                 'Meet Creepy the Monkey, your cheeky new friend with a mischievous grin! This soft and huggable monkey comes with posable limbs and a tail that curls just like a real monkey. Whether swinging from branches or snuggling at bedtime, Creepy is always ready for adventure!',
                 'Challenge your mind with the classic Cube of Rubik! This iconic puzzle features a 3x3 grid of colorful squares that twist and turn in endless combinations. Perfect for all ages, this brain-teaser is great for developing problem-solving skills and providing hours of fun. Can you solve it?',
@@ -54,8 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Experience gaming like never before with this vibrant red and green Nintendo Switch! The console lights up with excitement, featuring a stunning display and smooth controls. Perfect for on-the-go gaming or relaxing at home, this stylish Switch is ideal for every Nintendo fan!',
                 'Take to the skies with this vibrant yellow RC helicopter! Designed for outdoor flying, it features easy controls for smooth maneuvers and impressive agility. Perfect for hours of fun and exploration, this helicopter is a must-have for any flying enthusiast!'
             ];
-
-            // Custom images array
             const customImages = [
                 'images/toys/Creepy the Monkey.png',
                 'images/toys/Cube of Rubik.png',
@@ -80,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ];
 
-             const maxProducts = shopWrapper.classList.contains('shop-wrapper') ? data.products.length : 6;
+            const maxProducts = shopWrapper.classList.contains('shop-wrapper') ? data.products.length : 6;
 
             // Generate product cards
             data.products.slice(0, maxProducts).forEach((product, index) => {
