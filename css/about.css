@@ -1,0 +1,143 @@
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    background-image: url('../images/about-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Ensures content doesn't overflow the container */
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    z-index: 1; /* Places overlay above background but below content */
+}
+
+.about-hero-text {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+.about-hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.about-hero-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Mission, History, Values Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.mission h2, 
+.history h2,
+.team h2,
+.values h2 {
+    font-size: 2.5em;
+    color: #14223E;
+    margin-bottom: 20px;
+}
+
+.mission p,
+.history p,
+.values ul {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values ul li {
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px auto; 
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* Team Section */
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    flex: 1 1 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #14223E;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 100px 20px;
+    }
+
+    .about-hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .about-hero-text p {
+        font-size: 1.2em;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}

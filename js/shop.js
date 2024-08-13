@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const shopWrapper = document.querySelector('.shop-wrapper');
+    const shopWrapper = document.querySelector('.shop-wrapper') || document.querySelector('.card-wrapper');
+
+    if (!shopWrapper) return;
 
     // Fetch products from API
     fetch('https://dummyjson.com/products?limit=20')
@@ -78,26 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ];
 
+             const maxProducts = shopWrapper.classList.contains('shop-wrapper') ? data.products.length : 6;
+
             // Generate product cards
-            data.products.forEach((product, index) => {
+            data.products.slice(0, maxProducts).forEach((product, index) => {
                 const productCard = document.createElement('div');
-                productCard.classList.add('product-card');
+                productCard.className = shopWrapper.classList.contains('shop-wrapper') ? 'product-card' : 'card';
 
-                // Add a custom data-category attribute for filtering (if needed)
-                productCard.dataset.category = product.category || "uncategorized";
-
-                // Use custom title if available, otherwise fallback to API title
                 const title = customTitles[index] || product.title;
-
-                // Use custom description if available, otherwise fallback to API description
                 let description = customDescriptions[index] || product.description;
 
-                // Truncate the description if it's too long
                 if (description.length > 100) {
-                    description = description.substring(0, 100) + '... Read more';
+                    description = description.substring(0, 100) + '...';
                 }
 
-                // Use custom image if available, otherwise fallback to API image
                 const imageUrl = customImages[index] || product.thumbnail;
 
                 productCard.innerHTML = `
@@ -110,26 +106,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 shopWrapper.appendChild(productCard);
             });
         })
-        .catch(error => console.error('Error fetching products:', error));
+        .catch(error => console.error('Error fetching product data:', error));
 
-    // Search and Filter Functionality
-    window.searchProducts = function () {
-        const query = document.getElementById('search-bar').value.toLowerCase();
-        const filter = document.getElementById('filter-options').value;
-        const productCards = document.querySelectorAll('.product-card');
+    // Search and Filter Functionality (if applicable)
+    if (shopWrapper.classList.contains('shop-wrapper')) {
+        window.searchProducts = function () {
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            const filter = document.getElementById('filter-options').value;
+            const productCards = document.querySelectorAll('.product-card');
 
-        productCards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const category = card.dataset.category;
+            productCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const category = card.dataset.category;
 
-            const matchesSearch = title.includes(query);
-            const matchesFilter = !filter || category === filter;
+                const matchesSearch = title.includes(query);
+                const matchesFilter = !filter || category === filter;
 
-            if (matchesSearch && matchesFilter) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    };
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        };
+    }
 });
