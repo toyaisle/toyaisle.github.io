@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Toy Aisle</title>
+    <title>Toy Aisle Shop</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel = "stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/shop.css">
     <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
 </head>
+
 <body>
     <!-- NavBar -->
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="images/ta_logo.svg" class="logo"></a>
+            <a href="#"><img src="images/ta_logo.svg" class="logo"></a>
         </div>
         <ul>
             <li><a href="./">Home</a></li>
-            <li><a href="./shop" class="active">Shop</a></li>
+            <li><a href="./shop"  class="active">Shop</a></li>
             <li><a href="#">About</a></li>
             <li><a href="./contact">Contact</a></li>
         </ul>
@@ -35,24 +38,35 @@
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="index.html">Home</a>
-            <a href="shop.html" class="active">Shop</a>
+            <a href="./">Home</a>
+            <a href="./shop" class="active">Shop</a>
             <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="./contact">Contact</a>
             <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
             <a href="#"><i class="fas fa-user"></i> Login</a>
         </div>
     </div>
 
-    <main>
-        <section class="shop">
-            <h1>Shop</h1>
-            <div class="product-grid" id="product-grid">
-                <!-- Products will be dynamically loaded here -->
-            </div>
-        </section>
-    </main>
+    <!-- Shop Header for Search and Filters -->
+    <header class="shop-header">
+        <select id="filter-options">
+            <option value="">All Categories</option>
+            <option value="new">New Arrivals</option>
+            <option value="popular">Popular</option>
+            <option value="discounted">Discounted</option>
+        </select>
+        <input type="text" id="search-bar" placeholder="Search for products..." />
+        <button onclick="searchProducts()">Search</button>
+    </header>
 
+    <!-- Shop Section -->
+    <section class="shop">
+        <div class="shop-wrapper">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="about-us">
@@ -65,8 +79,8 @@
                 <div class="quick-links">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
@@ -87,11 +101,12 @@
             <p>© 2024 Toy Aisle</p>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/burgerMenu.js"></script>
     <script src="js/video.js"></script>
-    <script src="js/swiper.js"></script>
     <script src="js/shop.js"></script>
 </body>
+
 </html>

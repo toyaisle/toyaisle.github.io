@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
 }
 
-/*NavBar*/
+/* NavBar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,19 +16,26 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
     z-index: 2000;
 }
 
-.navbar .logo img {
-    height: 50px;
+.navbar .logo {
+    flex: 1;
+}
+
+.logo img {
+    height: 35px;
 }
 
 .navbar ul {
     display: flex;
+    flex-direction: row;
     list-style: none;
-    flex-grow: 1;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     max-width: 600px;
     font-size: 18px;
 }
@@ -69,7 +76,9 @@ body {
 .navbar .icons {
     display: flex;
     align-items: center;
-    padding: 40px;
+    padding-right: 40px;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .navbar .icons a {
@@ -79,16 +88,17 @@ body {
     text-decoration: none;
 }
 
+/* Overlay Menu */
 .overlay {
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: white;
     overflow-x: hidden;
     transition: right 0.5s;
-    z-index: 1001;
+    z-index: 3000;
 }
 
 .overlay-content {
@@ -103,7 +113,7 @@ body {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #14223E;
     display: block;
     transition: 0.3s;
 }
@@ -118,9 +128,10 @@ body {
     top: 20px;
     right: 45px;
     font-size: 60px;
-    color: white;
+    color: #14223E;
 }
 
+/* Burger Menu */
 .burger {
     display: none;
     cursor: pointer;
@@ -134,7 +145,7 @@ body {
     margin: 5px;
 }
 
-/*Hero*/
+/* Hero Section */
 .hero {
     background: url(https://images.unsplash.com/photo-1558060370-d644479cb6f7?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
     background-size: cover;
@@ -167,7 +178,7 @@ body {
     margin-top: 20px;
 }
 
-/*Card Section*/
+/* Card Section */
 .collection-title {
     text-align: center;
     margin: 50px 0;
@@ -177,6 +188,7 @@ body {
     font-size: 60px;
     color: #14223E;
 }
+
 .cards {
     padding: 0px 20px 50px 20px;
     display: flex;
@@ -187,6 +199,8 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
 }
 
 .card {
@@ -233,7 +247,50 @@ body {
     transform: scale(1.05);
 }
 
-/*Video Section*/
+/* Swiper Navigation */
+.swiper-button-prev, .swiper-button-next {
+    width: 44px;
+    height: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.swiper-button-prev {
+    left: -20px;
+}
+
+.swiper-button-next {
+    right: -20px;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -30px;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #EF3B3B; /* Matches button color */
+    width: 12px;
+    height: 12px;
+}
+
+/* Video Section */
 .video-container {
     display: flex;
     align-items: center;
@@ -244,7 +301,6 @@ body {
     box-sizing: border-box;
     margin: 0 auto; 
 }
-
 
 .video-description {
     text-align: left; 
@@ -272,7 +328,8 @@ body {
     width: 100%;
     height: auto;
 }
-/*Accordion*/
+
+/* Accordion */
 .accordion-container {
     display: flex;
     justify-content: center;
@@ -335,6 +392,7 @@ body {
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     color: #ffffff;
 }
@@ -415,6 +473,7 @@ footer {
     text-decoration: none;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -481,10 +540,15 @@ footer {
     }
 }
 
+/* Overlay for Mobile Menu */
 .overlay.show {
     right: 0;
 }
 
 body {
     padding-top: 80px;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
