@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const maxProducts = shopWrapper.classList.contains('shop-wrapper') ? data.products.length : 6;
 
-            // Generate product cards
             data.products.slice(0, maxProducts).forEach((product, index) => {
                 const productCard = document.createElement('div');
                 productCard.className = shopWrapper.classList.contains('shop-wrapper') ? 'product-card' : 'card';
